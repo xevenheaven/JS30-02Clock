@@ -28,6 +28,20 @@ body {
 		0 0 10px rgba(41, 33, 212, 0.82);
 }
 
+.clock-center {
+	position: relative;
+	width: 0.8rem;
+	height: 0.8rem;
+	top: 49%;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	border: 0.5px solid #B5B3DB;
+	border-radius: 50%;
+	background: #BED4E6;
+}
+
 .hand {
 	position: absolute;
 	background: #666666;
@@ -37,10 +51,12 @@ body {
 
 	transform-origin: 100%;
 	transform: rotate(90deg);
+	transition: all 0.05s;
+	transition-timing-function: cubic-bezier(0.1, 2.5, 0.6, 1);
 }
 
 .hand.hour-hand {
-	background: linear-gradient(90deg, transparent 25%, #666666 25%);
+	background: linear-gradient(90deg, transparent 25%, #333333 25%);
 }
 
 .hand.second-hand {
